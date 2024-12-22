@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Peter Malikebu's Curriculum Vitae</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        body {
+            background-image: url('{{ url_for("static", filename="images/back.jpg") }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr; /* Left, middle, right sections */
+            gap: 30px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .left, .middle, .right {
+            background-color: rgba(0, 0, 0, 0.6); /* Slight transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .left img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-section input,
+        .form-section textarea {
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .form-section .skills ul,
+        .form-section .projects ul,
+        .form-section .activities ul,
+        .form-section .languages ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .form-section .skills li,
+        .form-section .projects li,
+        .form-section .activities li,
+        .form-section .languages li {
+            background-color: #444;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .form-section .submit-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-section .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left">
+            <img id="profile-pic" src="{{ url_for('static', filename='images/imaged.jpg') }}" alt="peter"/>
+
+            <!-- Personal Details -->
+            <div class="form-section">
+                <h2>PERSONAL DETAILS</h2>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="Peter Malikebu" disabled />
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" value="+265 999 036 912" disabled />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="ptrmlku20@gmail.com" disabled />
+
+                <label for="location">Location</label>
+                <textarea id="location" name="location" disabled>A/p - Domansi, Katete Village. Zomba Dist. Malawi</textarea>
+
+                <label for="dob">Date of Birth</label>
+                <input type="text" id="dob" name="dob" value="30 Jun, 2000" disabled />
+            </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="middle">
+            <!-- Education -->
+            <div class="form-section">
+                <h2>EDUCATION</h2>
+
+                <label for="education-1">Malawi School Certificate of Education</label>
+                <input type="text" id="education-1" name="education-1" value="COBBE BARRACKS SECONDARY SCHOOL" disabled />
+                <input type="text" id="year-1" name="year-1" value="2016 - 2019" disabled />
+
+                <label for="education-2">Certificate in Cisco Academy</label>
+                <input type="text" id="education-2" name="education-2" value="CISCO ACADEMY, ONLINE COURSE" disabled />
+                <input type="text" id="year-2" name="year-2" value="2024" disabled />
+
+                <label for="education-3">Level 4, 5 & 6 Diploma</label>
+                <input type="text" id="education-3" name="education-3" value="Chancellor College, Dept. of Physics (ABMA)" disabled />
+                <input type="text" id="year-3" name="year-3" value="2020 - 2022" disabled />
+
+                <label for="education-4">Level 6 Diploma in Computing and Information Systems</label>
+                <input type="text" id="education-4" name="education-4" value="Chancellor College, Dept. of Physics (ABMA)" disabled />
+                <input type="text" id="year-4" name="year-4" value="2022 - 2023" disabled />
+
+                <label for="education-5">Pending Degree in Bachelor of Science in Computer Science</label>
+                <input type="text" id="education-5" name="education-5" value="DMI St. John The Baptist University" disabled />
+                <input type="text" id="year-5" name="year-5" value="2023 - 2024" disabled />
+            </div>
+
+            <!-- Work Experience -->
+            <div class="form-section">
+                <h2>WORK EXPERIENCE</h2>
+
+                <label for="job-1">Zomba Central Hospital, IT Officer</label>
+                <textarea id="job-1" name="job-1" disabled>Responsible for repairing computer problems. 03/08/23 to 8/09/23</textarea>
+
+                <label for="job-2">Malikebu Enterprise</label>
+                <textarea id="job-2" name="job-2" disabled>Responsible for selling cement 21/01/2022 to 03/09/2024</textarea>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="form-section">
+                <h2>SOFT SKILLS</h2>
+                <ul>
+                    <li>Microsoft Office</li>
+                    <li>Programming</li>
+                    <li>Graphic Designing</li>
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="form-section">
+                <h2>PROJECTS</h2>
+                <ul>
+                    <li>DataFortress: Strengthening Cloud-Based Data Protection with Advanced Access Controls and Audit Trails</li>
+                    <li>Mobile applications (TimeTable app, chat app, etc) - Currently waiting for graduation</li>
+                    <li>Collaboration Web Application - Developed using Python and Flask WebApp</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right">
+            <!-- Activities -->
+            <div class="form-section">
+                <h2>ACTIVITIES</h2>
+                <ul>
+                    <li>Coding</li>
+                    <li>Sports</li>
+                    <li>Volunteering</li>
+                </ul>
+            </div>
+
+            <!-- Languages -->
+            <div class="form-section">
+                <h2>LANGUAGES</h2>
+                <ul>
+                    <li>English</li>
+                    <li>Chichewa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
